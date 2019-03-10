@@ -16,15 +16,15 @@ class ProductListResource(Resource):
 
     @staticmethod
     @parse_params(
-        Argument('start_price', location='json', required=False, help='The price to filter from'),
-        Argument('end_price', location='json', required=False, help='The price to filter to'),
-        Argument('category', location='json', required=False, help='The category to filter on'),
-        Argument('subcategory', location='json', required=False, help='The subcategory to filter on'),
-        Argument('subsubcategory', location='json', required=False, help='The subsubcategory to filter on'),
-        Argument('pagination', location='json', required=False, help='Should the response be paginated'),
-        Argument('page', location='json', required=False, help='Page to get the products from'),
-        Argument('results_per_page', location='json', required=False, help='Result per page to display'),
-        Argument('sorted', location='json', required=False, help='Should the response be sorted by price'),
+        Argument('start_price', location='args', required=False, help='The price to filter from'),
+        Argument('end_price', location='args', required=False, help='The price to filter to'),
+        Argument('category', location='args', required=False, help='The category to filter on'),
+        Argument('subcategory', location='args', required=False, help='The subcategory to filter on'),
+        Argument('subsubcategory', location='args', required=False, help='The subsubcategory to filter on'),
+        Argument('pagination', location='args', required=False, help='Should the response be paginated'),
+        Argument('page', location='args', required=False, help='Page to get the products from'),
+        Argument('results_per_page', location='args', required=False, help='Result per page to display'),
+        Argument('sorted', location='args', required=False, help='Should the response be sorted by price'),
     )
     def get(
         start_price=None,
