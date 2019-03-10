@@ -3,6 +3,7 @@
 Define the REST verbs relative to the products list
 """
 
+from flasgger import swag_from
 from flask_restful import Resource
 from flask_restful.reqparse import Argument
 from flask.json import jsonify
@@ -15,8 +16,9 @@ class ProductListResource(Resource):
     """ Verbs relative to the products """
 
     @staticmethod
+    @swag_from('../swagger/products/GET.yml')
     @parse_params(
-        Argument('start_price', location='args', required=False, help='The price to filter from'),
+        Argument('start_price', location='args', required=False, help='The price to filter products from'),
         Argument('end_price', location='args', required=False, help='The price to filter to'),
         Argument('category', location='args', required=False, help='The category to filter on'),
         Argument('subcategory', location='args', required=False, help='The subcategory to filter on'),

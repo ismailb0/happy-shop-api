@@ -1,0 +1,68 @@
+Return all products
+---
+tags:
+  - product
+parameters:
+  - name: start_price
+    in: path
+    type: integer
+    description: The price to filter products from
+    example: 12
+  - name: end_price
+    in: path
+    type: integer
+    description: The price to filter products to
+    example: 76
+  - name: category
+    in: path
+    type: string
+    description: The category to filter products on
+    example: Makeup
+  - name: subcategory
+    in: path
+    type: string
+    description: The subcategory to filter products on
+    example: Face
+  - name: subsubcategory
+    in: path
+    type: string
+    description: The subsubcategory to filter products on
+    example: Foundation
+  - name: pagination
+    in: path
+    type: bool
+    description: Should the response be paginated
+    example: true
+  - name: page
+    in: path
+    type: integer
+    description: Page to get the products from
+    example: 1
+  - name: results_per_page
+    in: path
+    type: integer
+    description: Result per page to display
+    example: 10
+  - name: sorted
+    in: path
+    type: bool
+    description: Should the response be sorted by price
+    example: false
+responses:
+  200:
+    description: The product's information were successfully retrieved
+    schema:
+      example:
+        type: array
+        items:
+          type: object
+          properties:
+            brand: KAT VON D
+            category: Makeup
+            description: Lorem ipsum dolor sit amet.
+            id: 1
+            name: Lock-it Foundation
+            price: 56.0
+            rating: 4.3
+            subcategory: Face
+            subsubcategory: Foundation
