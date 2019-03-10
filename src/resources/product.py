@@ -22,7 +22,7 @@ class ProductResource(Resource):
 
         product = ProductRepository.get(product_id)
         return jsonify({
-            'product': product.json if product else None
+            'product': product.one_or_none().json if product else None
         })
 
 

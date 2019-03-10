@@ -9,7 +9,7 @@ class ProductRepository:
     @staticmethod
     def get(product_id):
         """ Query a product by last and first name """
-        return Product.query.filter_by(id=product_id).one_or_none()
+        return Product.query.filter_by(id=product_id)
 
     @staticmethod
     def get_all(
