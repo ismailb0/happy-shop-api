@@ -1,0 +1,71 @@
+Create a product based on the sent information
+---
+tags:
+  - product
+parameters:
+  - name: body
+    in: body
+    schema:
+      type: object
+      properties:
+        name:
+          type: string
+          description: The name of the product.
+          required: true
+          example: Lock-it Foundation
+        brand:
+          type: string
+          description: The brand of the product.
+          required: true
+          example: KAT VON D
+        price:
+          type: string
+          description: The price of the product.
+          required: true
+          example: 56.00
+        category:
+          type: string
+          description: The category of the product.
+          required: true
+          example: Makeup
+        subcategory:
+          type: string
+          description: The subcategory of the product.
+          required: true
+          example: Face
+        subsubcategory:
+          type: string
+          description: The subsubcategory of the product.
+          required: true
+          example: Foundation
+        description:
+          type: string
+          description: The description of the product.
+          required: false
+          example: "This product will make you look great!"
+        image:
+          type: string
+          description: The image of the product.
+          required: false
+          example: "/foundation.jpg"
+        rating:
+          type: string
+          description: The rating of the product.
+          required: false
+          example: 4.7
+responses:
+  200:
+    description: The product was successfully created
+    schema:
+      example:
+      example:
+        product:
+          brand: KAT VON D
+          category: Makeup
+          description: Lorem ipsum dolor sit amet.
+          id: 1
+          name: Lock-it Foundation
+          price: 56.0
+          rating: 4.3
+          subcategory: Face
+          subsubcategory: Foundation

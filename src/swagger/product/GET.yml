@@ -1,0 +1,25 @@
+Return a product key information based on its id
+---
+tags:
+  - product
+parameters:
+  - name: product_id
+    in: path
+    type: integer
+    description: the id of the product
+    example: 1
+responses:
+  200:
+    description: The product's information were successfully retrieved
+    schema:
+      example:
+        product:
+          brand: KAT VON D
+          category: Makeup
+          description: Lorem ipsum dolor sit amet.
+          id: 1
+          name: Lock-it Foundation
+          price: 56.0
+          rating: 4.3
+          subcategory: Face
+          subsubcategory: Foundation

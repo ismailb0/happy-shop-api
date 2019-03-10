@@ -16,17 +16,18 @@ server = Flask(__name__)
 
 server.config['SWAGGER'] = {
     "swagger_version": "2.0",
-    "title": "Application",
+    "title": "Happy Shop",
     "specs": [
         {
             "version": "0.0.1",
-            "title": "Application",
-            "endpoint": 'spec',
+            "title": "Happy Shop",
+            "endpoint": 'application/spec',
             "route": '/application/spec',
             "rule_filter": lambda rule: True  # all in
         }
     ],
-    "static_url_path": "/application/apidocs"
+    "static_url_path": "/apidocs",
+    "swagger_ui": True
 }
 
 Swagger(server)
