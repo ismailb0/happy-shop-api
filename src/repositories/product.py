@@ -29,11 +29,14 @@ class ProductRepository:
         if end_price:
             product_query = product_query.filter(Product.price <= end_price)
         if category:
-            product_query = product_query.filter_by(category=category)
+            categories = category.split(",")
+            product_query = product_query.filter(Product.category.in_(categories))
         if subcategory:
-            product_query = product_query.filter_by(subcategory=subcategory)
+            subcategories = subcategory.split(",")
+            product_query = product_query.filter(Product.subcategory.in_(subcategories))
         if subsubcategory:
-            product_query = product_query.filter_by(subsubcategory=subsubcategory)
+            subsubcategories = subsubcategory.split(",")
+            product_query = product_query.filter(Product.subsubcategory.in_(subsubcategories))
         if sorted:
             product_query = product_query.order_by(Product.price.asc())
 
