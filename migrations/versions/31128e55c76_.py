@@ -20,7 +20,7 @@ def upgrade():
     sa.Column('name', sa.String(length=300), nullable=False),
     sa.Column('brand', sa.String(length=300), nullable=False),
     sa.Column('price', sa.Float(), nullable=False),
-    sa.Column('description', sa.String(length=300), nullable=True),
+    sa.Column('description', sa.String(length=1500), nullable=True),
     sa.Column('image', sa.String(length=300), nullable=True),
     sa.Column('rating', sa.Float(), nullable=True),
     sa.Column('category', sa.String(length=300), nullable=False),

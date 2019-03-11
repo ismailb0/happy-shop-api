@@ -13,7 +13,7 @@ class Product(db.Model, BaseModel, metaclass=MetaBaseModel):
     name = db.Column(db.String(300), nullable=False)
     brand = db.Column(db.String(300), nullable=False)
     price = db.Column(db.Float, nullable=False)
-    description = db.Column(db.String(300), nullable=True)
+    description = db.Column(db.String(1500), nullable=True)
     image = db.Column(db.String(300), nullable=True)
     rating = db.Column(db.Float, nullable=True)
     category = db.Column(db.String(300), nullable=False)
