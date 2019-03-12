@@ -26,7 +26,7 @@ class ProductListResource(Resource):
         Argument('pagination', location='args', required=False, help='Should the response be paginated'),
         Argument('page', location='args', required=False, help='Page to get the products from'),
         Argument('results_per_page', location='args', required=False, help='Result per page to display'),
-        Argument('sorted', location='args', required=False, help='Should the response be sorted by price'),
+        Argument('sorted', location='args', required=False, help='Should the response be sorted by price or by best selling'),
     )
     def get(
         start_price=None,
@@ -37,7 +37,7 @@ class ProductListResource(Resource):
         pagination=True,
         page=1,
         results_per_page=10,
-        sorted=False
+        sorted="best_selling"
     ):
         """
             Return all products filtered by:

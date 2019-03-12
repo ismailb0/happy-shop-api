@@ -37,8 +37,10 @@ class ProductRepository:
         if subsubcategory:
             subsubcategories = subsubcategory.split(",")
             product_query = product_query.filter(Product.subsubcategory.in_(subsubcategories))
-        if sorted:
+        if sorted == 'price':
             product_query = product_query.order_by(Product.price.asc())
+        else:
+            product_query = product_query.order_by(Product.units_sold.desc())
 
         return product_query
 
@@ -53,6 +55,7 @@ class ProductRepository:
         description,
         image=None,
         rating=None,
+        units_sold=0
     ):
         """ Create a new product """
         product = Product(
@@ -64,7 +67,8 @@ class ProductRepository:
             subsubcategory,
             description,
             image,
-            rating
+            rating,
+            units_sold
         )
 
         return product.save()

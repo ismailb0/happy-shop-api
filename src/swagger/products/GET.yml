@@ -45,8 +45,8 @@ parameters:
     example: 10
   - name: sorted
     in: path
-    type: bool
-    description: Should the response be sorted by price
+    type: string
+    description: Should the response be sorted by price or by best_selling
     example: false
 responses:
   200:

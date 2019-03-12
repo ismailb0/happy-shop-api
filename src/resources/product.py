@@ -40,6 +40,7 @@ class ProductCreationResource(Resource):
         Argument('description', location='json', required=False, help='The description of the product.'),
         Argument('image', location='json', required=False, help='The image of the product.'),
         Argument('rating', location='json', required=False, help='The rating of the product.'),
+        Argument('units_sold', location='json', required=False, help='The number of units sold.'),
     )
     def post(
         name,
@@ -51,6 +52,7 @@ class ProductCreationResource(Resource):
         description=None,
         image=None,
         rating=None,
+        units_sold=0
     ):
         """ Create an product based on the sent information """
         product = ProductRepository.create(
@@ -63,5 +65,6 @@ class ProductCreationResource(Resource):
             description,
             image,
             rating,
+            units_sold
         )
         return jsonify({'product': product.json})

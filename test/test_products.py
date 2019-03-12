@@ -21,7 +21,8 @@ class TestProducts(unittest.TestCase):
           category="Makeup",
           subcategory="Face",
           subsubcategory="Foundation",
-          description="Lorem ipsum dolor sit amet."
+          description="Lorem ipsum dolor sit amet.",
+          units_sold=12
         ).save()
         Product(
           name="My Awesome Product 2",
@@ -30,7 +31,8 @@ class TestProducts(unittest.TestCase):
           category="Makeup",
           subcategory="Face",
           subsubcategory="Tools",
-          description="Lorem ipsum dolor sit amet."
+          description="Lorem ipsum dolor sit amet.",
+          units_sold=11
         ).save()
         Product(
           name="My Awesome Product 3",
@@ -39,7 +41,8 @@ class TestProducts(unittest.TestCase):
           category="Makeup",
           subcategory="Cheek",
           subsubcategory="Foundation",
-          description="Lorem ipsum dolor sit amet."
+          description="Lorem ipsum dolor sit amet.",
+          units_sold=13
         ).save()
         Product(
           name="My Awesome Product 4",
@@ -48,7 +51,8 @@ class TestProducts(unittest.TestCase):
           category="Makeup",
           subcategory="Cheek",
           subsubcategory="Tools",
-          description="Lorem ipsum dolor sit amet."
+          description="Lorem ipsum dolor sit amet.",
+          units_sold=22
         ).save()
         Product(
           name="My Awesome Product 5",
@@ -57,7 +61,8 @@ class TestProducts(unittest.TestCase):
           category="Perfume",
           subcategory="Nails",
           subsubcategory="Foundation",
-          description="Lorem ipsum dolor sit amet."
+          description="Lorem ipsum dolor sit amet.",
+          units_sold=37
         ).save()
         Product(
           name="My Awesome Product 6",
@@ -66,7 +71,8 @@ class TestProducts(unittest.TestCase):
           category="Perfume",
           subcategory="Nails",
           subsubcategory="Foundation",
-          description="Lorem ipsum dolor sit amet."
+          description="Lorem ipsum dolor sit amet.",
+          units_sold=1
         ).save()
         Product(
           name="My Awesome Product 7",
@@ -75,7 +81,8 @@ class TestProducts(unittest.TestCase):
           category="TEST_CATEGORY",
           subcategory="TEST_SUB_CATEGORY",
           subsubcategory="TEST_SUB_SUB_CATEGORY",
-          description="Lorem ipsum dolor sit amet."
+          description="Lorem ipsum dolor sit amet.",
+          units_sold=120
         ).save()
 
     def tearDown(self):
@@ -95,52 +102,17 @@ class TestProducts(unittest.TestCase):
 
         expected = [
             {
-              "id": 1,
-              "name": "My Awesome Product 1",
-              "brand": "My Awesome Brand 1",
-              "price": 50.00,
-              "category": "Makeup",
-              "subcategory": "Face",
-              "subsubcategory": "Foundation",
+              "id": 7,
+              "name": "My Awesome Product 7",
+              "brand": "My Awesome Brand 7",
+              "price": 12.00,
+              "category": "TEST_CATEGORY",
+              "subcategory": "TEST_SUB_CATEGORY",
+              "subsubcategory": "TEST_SUB_SUB_CATEGORY",
               "description": "Lorem ipsum dolor sit amet.",
               "image": None,
               "rating": None,
-            },
-            {
-              "id": 2,
-              "name": "My Awesome Product 2",
-              "brand": "My Awesome Brand 2",
-              "price": 52.00,
-              "category": "Makeup",
-              "subcategory": "Face",
-              "subsubcategory": "Tools",
-              "description": "Lorem ipsum dolor sit amet.",
-              "image": None,
-              "rating": None,
-            },
-            {
-              "id": 3,
-              "name": "My Awesome Product 3",
-              "brand": "My Awesome Brand 3",
-              "price": 54.00,
-              "category": "Makeup",
-              "subcategory": "Cheek",
-              "subsubcategory": "Foundation",
-              "description": "Lorem ipsum dolor sit amet.",
-              "image": None,
-              "rating": None,
-            },
-            {
-              "id": 4,
-              "name": "My Awesome Product 4",
-              "brand": "My Awesome Brand 4",
-              "price": 56.00,
-              "category": "Makeup",
-              "subcategory": "Cheek",
-              "subsubcategory": "Tools",
-              "description": "Lorem ipsum dolor sit amet.",
-              "image": None,
-              "rating": None,
+              "units_sold": 120,
             },
             {
               "id": 5,
@@ -153,6 +125,59 @@ class TestProducts(unittest.TestCase):
               "description": "Lorem ipsum dolor sit amet.",
               "image": None,
               "rating": None,
+              "units_sold": 37,
+            },
+            {
+              "id": 4,
+              "name": "My Awesome Product 4",
+              "brand": "My Awesome Brand 4",
+              "price": 56.00,
+              "category": "Makeup",
+              "subcategory": "Cheek",
+              "subsubcategory": "Tools",
+              "description": "Lorem ipsum dolor sit amet.",
+              "image": None,
+              "rating": None,
+              "units_sold": 22,
+            },
+            {
+              "id": 3,
+              "name": "My Awesome Product 3",
+              "brand": "My Awesome Brand 3",
+              "price": 54.00,
+              "category": "Makeup",
+              "subcategory": "Cheek",
+              "subsubcategory": "Foundation",
+              "description": "Lorem ipsum dolor sit amet.",
+              "image": None,
+              "rating": None,
+              "units_sold": 13,
+            },
+            {
+              "id": 1,
+              "name": "My Awesome Product 1",
+              "brand": "My Awesome Brand 1",
+              "price": 50.00,
+              "category": "Makeup",
+              "subcategory": "Face",
+              "subsubcategory": "Foundation",
+              "description": "Lorem ipsum dolor sit amet.",
+              "image": None,
+              "rating": None,
+              "units_sold": 12,
+            },
+            {
+              "id": 2,
+              "name": "My Awesome Product 2",
+              "brand": "My Awesome Brand 2",
+              "price": 52.00,
+              "category": "Makeup",
+              "subcategory": "Face",
+              "subsubcategory": "Tools",
+              "description": "Lorem ipsum dolor sit amet.",
+              "image": None,
+              "rating": None,
+              "units_sold": 11,
             },
             {
               "id": 6,
@@ -165,19 +190,8 @@ class TestProducts(unittest.TestCase):
               "description": "Lorem ipsum dolor sit amet.",
               "image": None,
               "rating": None,
+              "units_sold": 1,
             },
-            {
-              "id": 7,
-              "name": "My Awesome Product 7",
-              "brand": "My Awesome Brand 7",
-              "price": 12.00,
-              "category": "TEST_CATEGORY",
-              "subcategory": "TEST_SUB_CATEGORY",
-              "subsubcategory": "TEST_SUB_SUB_CATEGORY",
-              "description": "Lorem ipsum dolor sit amet.",
-              "image": None,
-              "rating": None,
-            }
         ]
 
         self.assertEqual(response_json, expected)
@@ -195,28 +209,17 @@ class TestProducts(unittest.TestCase):
 
         expected = [
             {
-              "id": 1,
-              "name": "My Awesome Product 1",
-              "brand": "My Awesome Brand 1",
-              "price": 50.00,
+              "id": 4,
+              "name": "My Awesome Product 4",
+              "brand": "My Awesome Brand 4",
+              "price": 56.00,
               "category": "Makeup",
-              "subcategory": "Face",
-              "subsubcategory": "Foundation",
-              "description": "Lorem ipsum dolor sit amet.",
-              "image": None,
-              "rating": None,
-            },
-            {
-              "id": 2,
-              "name": "My Awesome Product 2",
-              "brand": "My Awesome Brand 2",
-              "price": 52.00,
-              "category": "Makeup",
-              "subcategory": "Face",
+              "subcategory": "Cheek",
               "subsubcategory": "Tools",
               "description": "Lorem ipsum dolor sit amet.",
               "image": None,
               "rating": None,
+              "units_sold": 22,
             },
             {
               "id": 3,
@@ -229,19 +232,34 @@ class TestProducts(unittest.TestCase):
               "description": "Lorem ipsum dolor sit amet.",
               "image": None,
               "rating": None,
+              "units_sold": 13,
             },
             {
-              "id": 4,
-              "name": "My Awesome Product 4",
-              "brand": "My Awesome Brand 4",
-              "price": 56.00,
+              "id": 1,
+              "name": "My Awesome Product 1",
+              "brand": "My Awesome Brand 1",
+              "price": 50.00,
               "category": "Makeup",
-              "subcategory": "Cheek",
+              "subcategory": "Face",
+              "subsubcategory": "Foundation",
+              "description": "Lorem ipsum dolor sit amet.",
+              "image": None,
+              "rating": None,
+              "units_sold": 12,
+            },
+            {
+              "id": 2,
+              "name": "My Awesome Product 2",
+              "brand": "My Awesome Brand 2",
+              "price": 52.00,
+              "category": "Makeup",
+              "subcategory": "Face",
               "subsubcategory": "Tools",
               "description": "Lorem ipsum dolor sit amet.",
               "image": None,
               "rating": None,
-            }
+              "units_sold": 11,
+            },
         ]
 
         self.assertEqual(response_json, expected)
@@ -269,6 +287,7 @@ class TestProducts(unittest.TestCase):
               "description": "Lorem ipsum dolor sit amet.",
               "image": None,
               "rating": None,
+              "units_sold": 12,
             },
             {
               "id": 2,
@@ -281,7 +300,8 @@ class TestProducts(unittest.TestCase):
               "description": "Lorem ipsum dolor sit amet.",
               "image": None,
               "rating": None,
-            }
+              "units_sold": 11,
+            },
         ]
 
         self.assertEqual(response_json, expected)
@@ -299,16 +319,17 @@ class TestProducts(unittest.TestCase):
 
         expected = [
             {
-              "id": 1,
-              "name": "My Awesome Product 1",
-              "brand": "My Awesome Brand 1",
-              "price": 50.00,
-              "category": "Makeup",
-              "subcategory": "Face",
+              "id": 5,
+              "name": "My Awesome Product 5",
+              "brand": "My Awesome Brand 5",
+              "price": 58.00,
+              "category": "Perfume",
+              "subcategory": "Nails",
               "subsubcategory": "Foundation",
               "description": "Lorem ipsum dolor sit amet.",
               "image": None,
               "rating": None,
+              "units_sold": 37,
             },
             {
               "id": 3,
@@ -321,18 +342,20 @@ class TestProducts(unittest.TestCase):
               "description": "Lorem ipsum dolor sit amet.",
               "image": None,
               "rating": None,
+              "units_sold": 13,
             },
             {
-              "id": 5,
-              "name": "My Awesome Product 5",
-              "brand": "My Awesome Brand 5",
-              "price": 58.00,
-              "category": "Perfume",
-              "subcategory": "Nails",
+              "id": 1,
+              "name": "My Awesome Product 1",
+              "brand": "My Awesome Brand 1",
+              "price": 50.00,
+              "category": "Makeup",
+              "subcategory": "Face",
               "subsubcategory": "Foundation",
               "description": "Lorem ipsum dolor sit amet.",
               "image": None,
               "rating": None,
+              "units_sold": 12,
             },
             {
               "id": 6,
@@ -345,7 +368,8 @@ class TestProducts(unittest.TestCase):
               "description": "Lorem ipsum dolor sit amet.",
               "image": None,
               "rating": None,
-            }
+              "units_sold": 1,
+            },
         ]
 
         self.assertEqual(response_json, expected)
@@ -363,28 +387,17 @@ class TestProducts(unittest.TestCase):
 
         expected = [
             {
-              "id": 2,
-              "name": "My Awesome Product 2",
-              "brand": "My Awesome Brand 2",
-              "price": 52.00,
-              "category": "Makeup",
-              "subcategory": "Face",
-              "subsubcategory": "Tools",
-              "description": "Lorem ipsum dolor sit amet.",
-              "image": None,
-              "rating": None,
-            },
-            {
-              "id": 3,
-              "name": "My Awesome Product 3",
-              "brand": "My Awesome Brand 3",
-              "price": 54.00,
-              "category": "Makeup",
-              "subcategory": "Cheek",
+              "id": 5,
+              "name": "My Awesome Product 5",
+              "brand": "My Awesome Brand 5",
+              "price": 58.00,
+              "category": "Perfume",
+              "subcategory": "Nails",
               "subsubcategory": "Foundation",
               "description": "Lorem ipsum dolor sit amet.",
               "image": None,
               "rating": None,
+              "units_sold": 37,
             },
             {
               "id": 4,
@@ -397,19 +410,34 @@ class TestProducts(unittest.TestCase):
               "description": "Lorem ipsum dolor sit amet.",
               "image": None,
               "rating": None,
+              "units_sold": 22,
             },
             {
-              "id": 5,
-              "name": "My Awesome Product 5",
-              "brand": "My Awesome Brand 5",
-              "price": 58.00,
-              "category": "Perfume",
-              "subcategory": "Nails",
+              "id": 3,
+              "name": "My Awesome Product 3",
+              "brand": "My Awesome Brand 3",
+              "price": 54.00,
+              "category": "Makeup",
+              "subcategory": "Cheek",
               "subsubcategory": "Foundation",
               "description": "Lorem ipsum dolor sit amet.",
               "image": None,
               "rating": None,
-            }
+              "units_sold": 13,
+            },
+            {
+              "id": 2,
+              "name": "My Awesome Product 2",
+              "brand": "My Awesome Brand 2",
+              "price": 52.00,
+              "category": "Makeup",
+              "subcategory": "Face",
+              "subsubcategory": "Tools",
+              "description": "Lorem ipsum dolor sit amet.",
+              "image": None,
+              "rating": None,
+              "units_sold": 11,
+            },
         ]
 
         self.assertEqual(response_json, expected)
@@ -427,28 +455,17 @@ class TestProducts(unittest.TestCase):
 
         expected = [
             {
-              "id": 2,
-              "name": "My Awesome Product 2",
-              "brand": "My Awesome Brand 2",
-              "price": 52.00,
-              "category": "Makeup",
-              "subcategory": "Face",
-              "subsubcategory": "Tools",
-              "description": "Lorem ipsum dolor sit amet.",
-              "image": None,
-              "rating": None,
-            },
-            {
-              "id": 3,
-              "name": "My Awesome Product 3",
-              "brand": "My Awesome Brand 3",
-              "price": 54.00,
-              "category": "Makeup",
-              "subcategory": "Cheek",
+              "id": 5,
+              "name": "My Awesome Product 5",
+              "brand": "My Awesome Brand 5",
+              "price": 58.00,
+              "category": "Perfume",
+              "subcategory": "Nails",
               "subsubcategory": "Foundation",
               "description": "Lorem ipsum dolor sit amet.",
               "image": None,
               "rating": None,
+              "units_sold": 37,
             },
             {
               "id": 4,
@@ -461,18 +478,33 @@ class TestProducts(unittest.TestCase):
               "description": "Lorem ipsum dolor sit amet.",
               "image": None,
               "rating": None,
+              "units_sold": 22,
             },
             {
-              "id": 5,
-              "name": "My Awesome Product 5",
-              "brand": "My Awesome Brand 5",
-              "price": 58.00,
-              "category": "Perfume",
-              "subcategory": "Nails",
+              "id": 3,
+              "name": "My Awesome Product 3",
+              "brand": "My Awesome Brand 3",
+              "price": 54.00,
+              "category": "Makeup",
+              "subcategory": "Cheek",
               "subsubcategory": "Foundation",
               "description": "Lorem ipsum dolor sit amet.",
               "image": None,
               "rating": None,
+              "units_sold": 13,
+            },
+            {
+              "id": 2,
+              "name": "My Awesome Product 2",
+              "brand": "My Awesome Brand 2",
+              "price": 52.00,
+              "category": "Makeup",
+              "subcategory": "Face",
+              "subsubcategory": "Tools",
+              "description": "Lorem ipsum dolor sit amet.",
+              "image": None,
+              "rating": None,
+              "units_sold": 11,
             },
             {
               "id": 6,
@@ -485,7 +517,8 @@ class TestProducts(unittest.TestCase):
               "description": "Lorem ipsum dolor sit amet.",
               "image": None,
               "rating": None,
-            }
+              "units_sold": 1,
+            },
         ]
 
     def test_get_all_products_filtered_by_end_price(self):
@@ -501,28 +534,17 @@ class TestProducts(unittest.TestCase):
 
         expected = [
             {
-              "id": 1,
-              "name": "My Awesome Product 1",
-              "brand": "My Awesome Brand 1",
-              "price": 50.00,
-              "category": "Makeup",
-              "subcategory": "Face",
-              "subsubcategory": "Foundation",
+              "id": 7,
+              "name": "My Awesome Product 7",
+              "brand": "My Awesome Brand 7",
+              "price": 12.00,
+              "category": "TEST_CATEGORY",
+              "subcategory": "TEST_SUB_CATEGORY",
+              "subsubcategory": "TEST_SUB_SUB_CATEGORY",
               "description": "Lorem ipsum dolor sit amet.",
               "image": None,
               "rating": None,
-            },
-            {
-              "id": 2,
-              "name": "My Awesome Product 2",
-              "brand": "My Awesome Brand 2",
-              "price": 52.00,
-              "category": "Makeup",
-              "subcategory": "Face",
-              "subsubcategory": "Tools",
-              "description": "Lorem ipsum dolor sit amet.",
-              "image": None,
-              "rating": None,
+              "units_sold": 120,
             },
             {
               "id": 3,
@@ -535,25 +557,42 @@ class TestProducts(unittest.TestCase):
               "description": "Lorem ipsum dolor sit amet.",
               "image": None,
               "rating": None,
+              "units_sold": 13,
             },
             {
-              "id": 7,
-              "name": "My Awesome Product 7",
-              "brand": "My Awesome Brand 7",
-              "price": 12.00,
-              "category": "TEST_CATEGORY",
-              "subcategory": "TEST_SUB_CATEGORY",
-              "subsubcategory": "TEST_SUB_SUB_CATEGORY",
+              "id": 1,
+              "name": "My Awesome Product 1",
+              "brand": "My Awesome Brand 1",
+              "price": 50.00,
+              "category": "Makeup",
+              "subcategory": "Face",
+              "subsubcategory": "Foundation",
               "description": "Lorem ipsum dolor sit amet.",
               "image": None,
               "rating": None,
-            }
+              "units_sold": 12,
+            },
+            {
+              "id": 2,
+              "name": "My Awesome Product 2",
+              "brand": "My Awesome Brand 2",
+              "price": 52.00,
+              "category": "Makeup",
+              "subcategory": "Face",
+              "subsubcategory": "Tools",
+              "description": "Lorem ipsum dolor sit amet.",
+              "image": None,
+              "rating": None,
+              "units_sold": 11,
+            },
         ]
+
+        self.assertEqual(response_json, expected)
 
     def test_get_all_products_with_sorted_by_price(self):
         """ The GET on `/products` should return all products sorted by price """
         response = self.client.get(
-            '/application/products?sorted=true',
+            '/application/products?sorted=price',
             content_type='application/json'
         )
 
@@ -573,6 +612,7 @@ class TestProducts(unittest.TestCase):
               "description": "Lorem ipsum dolor sit amet.",
               "image": None,
               "rating": None,
+              "units_sold": 120,
             },
             {
               "id": 1,
@@ -585,6 +625,7 @@ class TestProducts(unittest.TestCase):
               "description": "Lorem ipsum dolor sit amet.",
               "image": None,
               "rating": None,
+              "units_sold": 12,
             },
             {
               "id": 2,
@@ -597,6 +638,7 @@ class TestProducts(unittest.TestCase):
               "description": "Lorem ipsum dolor sit amet.",
               "image": None,
               "rating": None,
+              "units_sold": 11,
             },
             {
               "id": 3,
@@ -609,6 +651,7 @@ class TestProducts(unittest.TestCase):
               "description": "Lorem ipsum dolor sit amet.",
               "image": None,
               "rating": None,
+              "units_sold": 13,
             },
             {
               "id": 4,
@@ -621,6 +664,7 @@ class TestProducts(unittest.TestCase):
               "description": "Lorem ipsum dolor sit amet.",
               "image": None,
               "rating": None,
+              "units_sold": 22,
             },
             {
               "id": 5,
@@ -633,6 +677,7 @@ class TestProducts(unittest.TestCase):
               "description": "Lorem ipsum dolor sit amet.",
               "image": None,
               "rating": None,
+              "units_sold": 37,
             },
             {
               "id": 6,
@@ -645,7 +690,8 @@ class TestProducts(unittest.TestCase):
               "description": "Lorem ipsum dolor sit amet.",
               "image": None,
               "rating": None,
-            }
+              "units_sold": 1,
+            },
         ]
 
         self.assertEqual(response_json, expected)
@@ -663,40 +709,17 @@ class TestProducts(unittest.TestCase):
 
         expected = [
             {
-              "id": 1,
-              "name": "My Awesome Product 1",
-              "brand": "My Awesome Brand 1",
-              "price": 50.00,
-              "category": "Makeup",
-              "subcategory": "Face",
+              "id": 5,
+              "name": "My Awesome Product 5",
+              "brand": "My Awesome Brand 5",
+              "price": 58.00,
+              "category": "Perfume",
+              "subcategory": "Nails",
               "subsubcategory": "Foundation",
               "description": "Lorem ipsum dolor sit amet.",
               "image": None,
               "rating": None,
-            },
-            {
-              "id": 2,
-              "name": "My Awesome Product 2",
-              "brand": "My Awesome Brand 2",
-              "price": 52.00,
-              "category": "Makeup",
-              "subcategory": "Face",
-              "subsubcategory": "Tools",
-              "description": "Lorem ipsum dolor sit amet.",
-              "image": None,
-              "rating": None,
-            },
-            {
-              "id": 3,
-              "name": "My Awesome Product 3",
-              "brand": "My Awesome Brand 3",
-              "price": 54.00,
-              "category": "Makeup",
-              "subcategory": "Cheek",
-              "subsubcategory": "Foundation",
-              "description": "Lorem ipsum dolor sit amet.",
-              "image": None,
-              "rating": None,
+              "units_sold": 37,
             },
             {
               "id": 4,
@@ -709,18 +732,46 @@ class TestProducts(unittest.TestCase):
               "description": "Lorem ipsum dolor sit amet.",
               "image": None,
               "rating": None,
+              "units_sold": 22,
             },
             {
-              "id": 5,
-              "name": "My Awesome Product 5",
-              "brand": "My Awesome Brand 5",
-              "price": 58.00,
-              "category": "Perfume",
-              "subcategory": "Nails",
+              "id": 3,
+              "name": "My Awesome Product 3",
+              "brand": "My Awesome Brand 3",
+              "price": 54.00,
+              "category": "Makeup",
+              "subcategory": "Cheek",
               "subsubcategory": "Foundation",
               "description": "Lorem ipsum dolor sit amet.",
               "image": None,
               "rating": None,
+              "units_sold": 13,
+            },
+            {
+              "id": 1,
+              "name": "My Awesome Product 1",
+              "brand": "My Awesome Brand 1",
+              "price": 50.00,
+              "category": "Makeup",
+              "subcategory": "Face",
+              "subsubcategory": "Foundation",
+              "description": "Lorem ipsum dolor sit amet.",
+              "image": None,
+              "rating": None,
+              "units_sold": 12,
+            },
+            {
+              "id": 2,
+              "name": "My Awesome Product 2",
+              "brand": "My Awesome Brand 2",
+              "price": 52.00,
+              "category": "Makeup",
+              "subcategory": "Face",
+              "subsubcategory": "Tools",
+              "description": "Lorem ipsum dolor sit amet.",
+              "image": None,
+              "rating": None,
+              "units_sold": 11,
             },
             {
               "id": 6,
@@ -733,7 +784,8 @@ class TestProducts(unittest.TestCase):
               "description": "Lorem ipsum dolor sit amet.",
               "image": None,
               "rating": None,
-            }
+              "units_sold": 1,
+            },
         ]
 
         self.assertEqual(response_json, expected)
@@ -749,54 +801,21 @@ class TestProducts(unittest.TestCase):
 
         response_json = json.loads(response.data.decode('utf-8'))
 
+        self.maxDiff = None
+
         expected = [
             {
-              "id": 1,
-              "name": "My Awesome Product 1",
-              "brand": "My Awesome Brand 1",
-              "price": 50.00,
-              "category": "Makeup",
-              "subcategory": "Face",
-              "subsubcategory": "Foundation",
+              "id": 7,
+              "name": "My Awesome Product 7",
+              "brand": "My Awesome Brand 7",
+              "price": 12.00,
+              "category": "TEST_CATEGORY",
+              "subcategory": "TEST_SUB_CATEGORY",
+              "subsubcategory": "TEST_SUB_SUB_CATEGORY",
               "description": "Lorem ipsum dolor sit amet.",
               "image": None,
               "rating": None,
-            },
-            {
-              "id": 2,
-              "name": "My Awesome Product 2",
-              "brand": "My Awesome Brand 2",
-              "price": 52.00,
-              "category": "Makeup",
-              "subcategory": "Face",
-              "subsubcategory": "Tools",
-              "description": "Lorem ipsum dolor sit amet.",
-              "image": None,
-              "rating": None,
-            },
-            {
-              "id": 3,
-              "name": "My Awesome Product 3",
-              "brand": "My Awesome Brand 3",
-              "price": 54.00,
-              "category": "Makeup",
-              "subcategory": "Cheek",
-              "subsubcategory": "Foundation",
-              "description": "Lorem ipsum dolor sit amet.",
-              "image": None,
-              "rating": None,
-            },
-            {
-              "id": 4,
-              "name": "My Awesome Product 4",
-              "brand": "My Awesome Brand 4",
-              "price": 56.00,
-              "category": "Makeup",
-              "subcategory": "Cheek",
-              "subsubcategory": "Tools",
-              "description": "Lorem ipsum dolor sit amet.",
-              "image": None,
-              "rating": None,
+              "units_sold": 120,
             },
             {
               "id": 5,
@@ -809,7 +828,47 @@ class TestProducts(unittest.TestCase):
               "description": "Lorem ipsum dolor sit amet.",
               "image": None,
               "rating": None,
-            }
+              "units_sold": 37,
+            },
+            {
+              "id": 4,
+              "name": "My Awesome Product 4",
+              "brand": "My Awesome Brand 4",
+              "price": 56.00,
+              "category": "Makeup",
+              "subcategory": "Cheek",
+              "subsubcategory": "Tools",
+              "description": "Lorem ipsum dolor sit amet.",
+              "image": None,
+              "rating": None,
+              "units_sold": 22,
+            },
+            {
+              "id": 3,
+              "name": "My Awesome Product 3",
+              "brand": "My Awesome Brand 3",
+              "price": 54.00,
+              "category": "Makeup",
+              "subcategory": "Cheek",
+              "subsubcategory": "Foundation",
+              "description": "Lorem ipsum dolor sit amet.",
+              "image": None,
+              "rating": None,
+              "units_sold": 13,
+            },
+            {
+              "id": 1,
+              "name": "My Awesome Product 1",
+              "brand": "My Awesome Brand 1",
+              "price": 50.00,
+              "category": "Makeup",
+              "subcategory": "Face",
+              "subsubcategory": "Foundation",
+              "description": "Lorem ipsum dolor sit amet.",
+              "image": None,
+              "rating": None,
+              "units_sold": 12,
+            },
         ]
 
         self.assertEqual(response_json, expected)

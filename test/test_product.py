@@ -21,7 +21,8 @@ class TestProduct(unittest.TestCase):
           category="Makeup",
           subcategory="Face",
           subsubcategory="Foundation",
-          description="Lorem ipsum dolor sit amet."
+          description="Lorem ipsum dolor sit amet.",
+          units_sold=10
         ).save()
 
     def tearDown(self):
@@ -49,7 +50,8 @@ class TestProduct(unittest.TestCase):
               "subcategory": "Face",
               "subsubcategory": "Foundation",
               "description": "Lorem ipsum dolor sit amet.",
-              "id": 1
+              "id": 1,
+              "units_sold": 10
             },
         })
 
@@ -65,7 +67,8 @@ class TestProduct(unittest.TestCase):
               "category": "Makeup",
               "subcategory": "Nails",
               "subsubcategory": "Foundation",
-              "description": "My product description."
+              "description": "My product description.",
+              "units_sold": 123
             })
         )
 
@@ -84,7 +87,8 @@ class TestProduct(unittest.TestCase):
                   "image": None,
                   "rating": None,
                   "subsubcategory": "Foundation",
-                  "description": "My product description."
+                  "description": "My product description.",
+                  "units_sold": 123
                  }
             }
         )

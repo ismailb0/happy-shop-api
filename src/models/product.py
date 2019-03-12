@@ -19,6 +19,7 @@ class Product(db.Model, BaseModel, metaclass=MetaBaseModel):
     category = db.Column(db.String(300), nullable=False)
     subcategory = db.Column(db.String(300), nullable=False)
     subsubcategory = db.Column(db.String(300), nullable=False)
+    units_sold = db.Column(db.Integer(), nullable=False, default=31)
 
     def __init__(
         self,
@@ -31,6 +32,7 @@ class Product(db.Model, BaseModel, metaclass=MetaBaseModel):
         description=None,
         image=None,
         rating=None,
+        units_sold=0,
     ):
         """ Create a new Product """
         self.name = name
@@ -42,3 +44,4 @@ class Product(db.Model, BaseModel, metaclass=MetaBaseModel):
         self.category = category
         self.subcategory = subcategory
         self.subsubcategory = subsubcategory
+        self.units_sold = units_sold

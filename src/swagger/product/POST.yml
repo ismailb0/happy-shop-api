@@ -53,6 +53,11 @@ parameters:
           description: The rating of the product.
           required: false
           example: 4.7
+        units_sold:
+          type: integer
+          description: The number of units sold.
+          required: false
+          example: 12
 responses:
   200:
     description: The product was successfully created
@@ -69,3 +74,4 @@ responses:
           rating: 4.3
           subcategory: Face
           subsubcategory: Foundation
+          units_sold: 12
