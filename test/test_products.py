@@ -194,7 +194,8 @@ class TestProducts(unittest.TestCase):
             },
         ]
 
-        self.assertEqual(response_json, expected)
+        self.assertEqual(response_json["products"], expected)
+        self.assertEqual(response_json["count"], 7)
 
     def test_get_all_products_filtered_by_category(self):
         """ The GET on `/products` should return all products with matching category """
@@ -262,7 +263,8 @@ class TestProducts(unittest.TestCase):
             },
         ]
 
-        self.assertEqual(response_json, expected)
+        self.assertEqual(response_json["products"], expected)
+        self.assertEqual(response_json["count"], 4)
 
     def test_get_all_products_filtered_by_subcategory(self):
         """ The GET on `/products` should return all products with matching subcategory """
@@ -304,7 +306,8 @@ class TestProducts(unittest.TestCase):
             },
         ]
 
-        self.assertEqual(response_json, expected)
+        self.assertEqual(response_json["products"], expected)
+        self.assertEqual(response_json["count"], 2)
 
     def test_get_all_products_filtered_by_subsubcategory(self):
         """ The GET on `/products` should return all products with matching subsubcategory """
@@ -372,7 +375,8 @@ class TestProducts(unittest.TestCase):
             },
         ]
 
-        self.assertEqual(response_json, expected)
+        self.assertEqual(response_json["products"], expected)
+        self.assertEqual(response_json["count"], 4)
 
     def test_get_all_products_filtered_by_start_price_and_end_price(self):
         """ The GET on `/products` should return all products with matching price """
@@ -440,7 +444,8 @@ class TestProducts(unittest.TestCase):
             },
         ]
 
-        self.assertEqual(response_json, expected)
+        self.assertEqual(response_json["products"], expected)
+        self.assertEqual(response_json["count"], 4)
 
     def test_get_all_products_filtered_by_start_price(self):
         """ The GET on `/products` should return all products with matching price """
@@ -521,6 +526,9 @@ class TestProducts(unittest.TestCase):
             },
         ]
 
+        self.assertEqual(response_json["products"], expected)
+        self.assertEqual(response_json["count"], 5)
+
     def test_get_all_products_filtered_by_end_price(self):
         """ The GET on `/products` should return all products with matching price """
         response = self.client.get(
@@ -587,7 +595,8 @@ class TestProducts(unittest.TestCase):
             },
         ]
 
-        self.assertEqual(response_json, expected)
+        self.assertEqual(response_json["products"], expected)
+        self.assertEqual(response_json["count"], 4)
 
     def test_get_all_products_with_sorted_by_price(self):
         """ The GET on `/products` should return all products sorted by price """
@@ -694,7 +703,8 @@ class TestProducts(unittest.TestCase):
             },
         ]
 
-        self.assertEqual(response_json, expected)
+        self.assertEqual(response_json["products"], expected)
+        self.assertEqual(response_json["count"], 7)
 
     def test_get_all_products_with_no_filtered_by_multiple_categories(self):
         """ The GET on `/products` should return all products filtered by multiple categories """
@@ -788,7 +798,8 @@ class TestProducts(unittest.TestCase):
             },
         ]
 
-        self.assertEqual(response_json, expected)
+        self.assertEqual(response_json["products"], expected)
+        self.assertEqual(response_json["count"], 6)
 
     def test_get_all_first_page_products(self):
         """ The GET on `/products` should return a paginated list of products """
@@ -871,4 +882,5 @@ class TestProducts(unittest.TestCase):
             },
         ]
 
-        self.assertEqual(response_json, expected)
+        self.assertEqual(response_json["products"], expected)
+        self.assertEqual(response_json["count"], 7)

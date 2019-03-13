@@ -58,9 +58,14 @@ class ProductListResource(Resource):
         if pagination:
             paginated_products = products.paginate(int(page), int(results_per_page), False)
             products = paginated_products.items
+            total = paginated_products.total
         else:
             products = products.all()
+            total = len(products)
 
         product_list = [product.json for product in products]
 
-        return jsonify(product_list)
+        return jsonify({
+            "products": product_list,
+            "count": total
+        })
