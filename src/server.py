@@ -3,7 +3,9 @@ from flask.blueprints import Blueprint
 from flask_cors import CORS
 from flasgger import Swagger
 
+import sys
 import config
+import logging
 from models import db
 import routes
 
@@ -32,6 +34,9 @@ server.config['SWAGGER'] = {
 }
 
 Swagger(server)
+
+server.logger.addHandler(logging.StreamHandler(sys.stdout))
+server.logger.setLevel(logging.ERROR)
 
 server.debug = config.DEBUG
 
