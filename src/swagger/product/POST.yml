@@ -63,7 +63,7 @@ responses:
     description: The product was successfully created
     schema:
       example:
-      example:
+        count: 145
         product:
           brand: KAT VON D
           category: Makeup

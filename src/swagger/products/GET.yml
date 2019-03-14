@@ -48,6 +48,7 @@ parameters:
     type: string
     description: Should the response be sorted by price or by best_selling
     example: false
+    enum: [best_selling, price]
 responses:
   200:
     description: The product's information were successfully retrieved
@@ -66,3 +67,4 @@ responses:
             rating: 4.3
             subcategory: Face
             subsubcategory: Foundation
+            units_sold: 345432
