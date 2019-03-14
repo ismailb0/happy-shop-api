@@ -1,4 +1,4 @@
-Return all products
+Return all products filtered, sorted and/or paginated
 ---
 tags:
   - product

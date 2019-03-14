@@ -6,7 +6,7 @@ parameters:
   - name: product_id
     in: path
     type: integer
-    description: the id of the product
+    description: The id of the product to get
     example: 1
 responses:
   200:
